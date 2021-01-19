@@ -1,4 +1,5 @@
 # System-wide .bashrc file for interactive bash(1) shells.
+# Backed up to GitHub Mon Jan 18 17:52:54 MST 2021
 
 # To enable the settings / commands in this file for login shells as well,
 # this file has to be sourced in /etc/profile.
@@ -28,8 +29,11 @@ set -o vi
 export EDITOR=vim
 
 #make a larger history size
-HISTSIZE=2000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=10000
+
+#remove duplicate commands from history
+HISTCONTROL=erasedups:ignoredups
 
 # Commented out, don't overwrite xterm -T "title" -n "icontitle" by default.
 # If this is an xterm set the title to user@host:dir

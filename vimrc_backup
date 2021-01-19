@@ -1,5 +1,5 @@
 " Personal VIMRC file
-"Edited and backed up Wed Nov 25 06:20:17 MST 2020
+"Last backed up on GitHub: Mon Jan 18 17:53:32 MST 2021
 
 
 "Section 1: User Interface
@@ -43,7 +43,7 @@ au InsertLeave * let &updatetime=updaterestore
 set history=500
 
 "display tab characters and trailing whitespace
-set listchars=tab:>~,nbsp:_,trail:.
+set listchars=tab:>~,nbsp:_,trail:#
 set list
 
 "Section 2: Indentation options
@@ -107,8 +107,8 @@ inoremap <Down> <C-N>
 nmap <Left> :bp<Enter>
 nmap <Right> :bn<Enter>
 
-"Map down to suspend.
-nmap <Down> :suspend<Enter>
+"Map down to bring up buffer list and prompt.
+nnoremap <Down> :buffers<CR>
 
 "Map f2 to editing VIMRC.
 nmap <F2> :e $MYVIMRC<Enter>
@@ -132,7 +132,7 @@ nmap <F7> :! sudo pylint3 -ry  % > ~/linter_log.txt <Enter>
 nmap <F8> :! git add -p<Enter>
 
 "Map f9 to commit staged changes to repository 
-nmap <f9> :! git commit<Enter>
+nmap <F9> :! git commit<Enter>
 
 "Map f10 to git commit to GitHub
 nmap <F10> :! git push origin master<Enter>
